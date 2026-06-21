@@ -122,10 +122,15 @@
   .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px;}
   .empty-state .mark{font-family:'JetBrains Mono';color:var(--purple-bright);}
 
+  /* Offerwall iframe wrapper */
+  .offerwall-iframe-wrap{width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-top:10px;}
+  .offerwall-iframe-wrap iframe{width:100%;height:600px;border:none;display:block;}
+
   @media(max-width:760px){
     .navlinks{display:none;}
     .hamburger{display:block;}
     .hero h1{font-size:32px;}
+    .offerwall-iframe-wrap iframe{height:480px;}
   }
 </style>
 </head>
@@ -249,9 +254,21 @@
       </div>
     </div>
 
+    <!-- OFFERWALL SECTION — reward-me.eu iframe -->
+    <div class="card" style="margin-top:24px;">
+      <h3 style="margin-top:0;">Complete Offers & Earn</h3>
+      <p style="color:var(--muted);font-size:13px;margin:0 0 10px;">Complete offers below to earn real money directly to your balance.</p>
+      <div class="offerwall-iframe-wrap">
+        <iframe
+          src="https://reward-me.eu/0cb15872-6d76-11f1-aac6-8a5fb7be40ea"
+          sandbox="allow-top-navigation allow-scripts allow-same-origin allow-popups allow-forms"
+        ></iframe>
+      </div>
+    </div>
+
     <div class="grid-2" style="margin-top:24px;align-items:start;">
       <div class="card">
-        <h3 style="margin-top:0;">Offerwalls</h3>
+        <h3 style="margin-top:0;">More Offerwalls</h3>
         <div id="dashOfferwalls" style="display:flex;flex-direction:column;gap:10px;"></div>
       </div>
       <div class="card">
@@ -432,9 +449,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// The ONLY email recognized as admin. There is no separate "admin password" stored
-// anywhere in this file — whoever controls this Gmail account's Firebase Auth
-// password IS the admin. Set that password by signing up normally with this email.
 const ADMIN_EMAIL = "sa5332227@gmail.com";
 
 let currentUser = null;
@@ -598,10 +612,12 @@ document.getElementById('copyRef').addEventListener('click', () => {
 
 async function loadDashboard(){
   updateDashboardUI();
+
+  // Load additional offerwalls from Firebase (admin-added ones)
   const box = document.getElementById('dashOfferwalls');
   const snap = await getDocs(query(collection(db,"offerwalls"), where("active","==",true)));
   if (snap.empty){
-    box.innerHTML = `<div class="empty-state">No active offerwalls right now.</div>`;
+    box.innerHTML = `<div class="empty-state">No additional offerwalls right now.</div>`;
   } else {
     box.innerHTML = '';
     snap.forEach(d => {
@@ -611,6 +627,7 @@ async function loadDashboard(){
     });
   }
 
+  // Load transaction history
   const txBox = document.getElementById('txHistory');
   const txSnap = await getDocs(query(collection(db,"transactions"), where("uid","==",currentUser.uid), orderBy("createdAt","desc"), limit(20)));
   if (txSnap.empty){
