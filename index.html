@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SABR Empire — Get Paid To Complete Offers</title>
+<meta name="description" content="Complete offers, surveys and trials. Get paid in real money — no coins, no gimmicks." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SABR Empire — Get Paid To Complete Offers" />
+<meta property="og:description" content="Complete offers, surveys and trials. Get paid in real money — no coins, no gimmicks." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0712;--surface:#140F1F;--surface-2:#1B1429;--border:#2A2138;
+    --purple:#7C3AED;--purple-bright:#A855F7;--violet-glow:#C084FC;
+    --text:#F3F0F8;--muted:#9C93AE;--green:#22C55E;--red:#F87171;--amber:#FBBF24;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  .hidden{display:none !important;}
+  .container{max-width:1080px;margin:0 auto;padding:0 24px;}
+  nav.topnav{position:sticky;top:0;z-index:50;background:rgba(10,7,18,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .navwrap{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:'Space Grotesk';font-weight:700;font-size:19px;display:flex;align-items:center;gap:8px;}
+  .logo .mark{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--purple-bright),var(--violet-glow));box-shadow:0 0 12px var(--purple-bright);}
+  .navlinks{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted);}
+  .navlinks a:hover{color:var(--text);}
+  .navauth{display:flex;gap:10px;align-items:center;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 18px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;text-decoration:none;font-family:'Inter';transition:transform .12s ease,opacity .12s ease;}
+  .btn:active{transform:scale(0.97);}
+  .btn-primary{background:linear-gradient(135deg,var(--purple),var(--purple-bright));color:#fff;}
+  .btn-primary:hover{opacity:.92;}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--purple-bright);}
+  .btn-danger{background:rgba(248,113,113,0.12);color:var(--red);border:1px solid rgba(248,113,113,0.3);}
+  .btn-sm{padding:6px 12px;font-size:13px;}
+  .hamburger{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;padding:4px 8px;}
+  section{padding:64px 0;}
+  .eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--purple-bright);font-weight:600;margin-bottom:12px;}
+  .hero h1{font-size:44px;line-height:1.1;margin:0 0 16px;}
+  .hero p.lead{color:var(--muted);font-size:17px;max-width:560px;line-height:1.6;}
+  .grad-text{background:linear-gradient(135deg,var(--purple-bright),var(--violet-glow));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;}
+  .card-hover:hover{border-color:rgba(168,85,247,0.4);}
+  .pipeline{display:flex;align-items:center;gap:0;margin-top:40px;flex-wrap:wrap;}
+  .pipe-step{flex:1;min-width:160px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;}
+  .pipe-step .num{font-family:'JetBrains Mono';font-size:12px;color:var(--purple-bright);}
+  .pipe-step h4{margin:8px 0 4px;font-size:15px;}
+  .pipe-step p{margin:0;color:var(--muted);font-size:13px;line-height:1.5;}
+  .pipe-arrow{color:var(--purple-bright);font-size:20px;padding:0 12px;flex-shrink:0;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;padding:10px 8px;border-bottom:1px solid var(--border);}
+  td{padding:12px 8px;border-bottom:1px solid var(--border);}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;}
+  .pill-active{background:rgba(34,197,94,0.15);color:var(--green);}
+  .pill-banned{background:rgba(248,113,113,0.15);color:var(--red);}
+  input,select,textarea{width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:11px 13px;color:var(--text);font-family:'Inter';font-size:14px;outline:none;}
+  input:focus,select:focus,textarea:focus{border-color:var(--purple-bright);}
+  label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px;}
+  .field{margin-bottom:16px;}
+  form .btn{width:100%;margin-top:6px;}
+  .authcard{max-width:420px;margin:40px auto;}
+  .balance-figure{font-family:'JetBrains Mono';font-size:42px;font-weight:600;}
+  .stat-label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+  .msg{padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;}
+  .msg-error{background:rgba(248,113,113,0.1);color:var(--red);border:1px solid rgba(248,113,113,0.25);}
+  .msg-ok{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.25);}
+  footer{border-top:1px solid var(--border);padding:40px 0;color:var(--muted);font-size:13px;}
+  footer .footlinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;}
+  .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px;}
+  .ow-iframe-wrap{width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-top:12px;}
+  .ow-iframe-wrap iframe{width:100%;height:600px;border:none;display:block;}
+  .ow-card{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;}
+  .ow-card h4{margin:0 0 6px;font-size:15px;}
+  .ow-card p{margin:0;color:var(--muted);font-size:13px;}
+  @media(max-width:760px){
+    .grid-3{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+    .navlinks{display:none;flex-direction:column;position:absolute;top:56px;right:24px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;z-index:100;}
+    .navlinks.open{display:flex;}
+    .hamburger{display:block;}
+    .hero h1{font-size:30px;}
+    .ow-iframe-wrap iframe{height:480px;}
+    .pipe-arrow{display:none;}
+    .pipe-step{min-width:100%;margin-bottom:10px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="navwrap">
+    <a href="#/home" class="logo"><span class="mark"></span>SABR EMPIRE</a>
+    <div class="navlinks" id="navLinks">
+      <a href="#/home">Home</a>
+      <a href="#/leaderboard">Leaderboard</a>
+      <a href="#/about">About</a>
+      <a href="#/contact">Contact</a>
+    </div>
+    <div class="navauth" id="navAuth">
+      <a href="#/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="#/signup" class="btn btn-primary btn-sm">Sign up</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<main id="app">
+
+<!-- HOME -->
+<section data-route="home" class="hero">
+  <div class="container">
+    <div class="eyebrow">Get Paid To</div>
+    <h1>Complete offers.<br><span class="grad-text">Get paid in real dollars.</span></h1>
+    <p class="lead">No coins, no points, no gimmicks. Every offer you finish is verified directly by the network and converted straight to your withdrawable balance.</p>
+    <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;">
+      <a href="#/signup" class="btn btn-primary">Create free account</a>
+      <a href="#/leaderboard" class="btn btn-ghost">See leaderboard</a>
+    </div>
+    <div class="pipeline">
+      <div class="pipe-step"><div class="num">01</div><h4>Complete an offer</h4><p>Surveys, app installs, trials, or game milestones from our offerwall partners.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><div class="num">02</div><h4>Network verifies it</h4><p>The offerwall confirms completion and sends us a signed server-to-server receipt.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><div class="num">03</div><h4>Balance updates</h4><p>Your dashboard reflects the verified amount instantly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="eyebrow">Cash out</div>
+    <h2 style="margin-top:0;">Withdraw the way you want</h2>
+    <div class="grid-3" id="paymentMethods" style="font-size:14px;color:var(--muted);"></div>
+    <p style="margin-top:20px;color:var(--muted);font-size:13px;">Minimum withdrawal $5.00 · Processed on the 1st and 15th of each month.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">FAQ</div>
+    <div id="faqList" style="margin-top:16px;display:flex;flex-direction:column;gap:12px;"></div>
+  </div>
+</section>
+
+<!-- LOGIN -->
+<section data-route="login">
+  <div class="container">
+    <div class="card authcard">
+      <h2 style="margin-top:0;">Log in</h2>
+      <div id="loginMsg"></div>
+      <form id="loginForm">
+        <div class="field"><label>Email</label><input type="email" id="loginEmail" required /></div>
+        <div class="field"><label>Password</label><input type="password" id="loginPassword" required /></div>
+        <button class="btn btn-primary" type="submit">Log in</button>
+      </form>
+      <p style="font-size:13px;color:var(--muted);margin-top:16px;">No account? <a href="#/signup" style="color:var(--purple-bright);">Sign up</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section data-route="signup">
+  <div class="container">
+    <div class="card authcard">
+      <h2 style="margin-top:0;">Create your account</h2>
+      <div id="signupMsg"></div>
+      <form id="signupForm">
+        <div class="field"><label>Full name</label><input type="text" id="suName" required /></div>
+        <div class="field"><label>Email</label><input type="email" id="suEmail" required /></div>
+        <div class="field"><label>Country</label><input type="text" id="suCountry" required placeholder="e.g. India" /></div>
+        <div class="field"><label>Password</label><input type="password" id="suPassword" required minlength="8" /></div>
+        <button class="btn btn-primary" type="submit">Create account</button>
+      </form>
+      <p style="font-size:13px;color:var(--muted);margin-top:16px;">Already have an account? <a href="#/login" style="color:var(--purple-bright);">Log in</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section data-route="dashboard">
+  <div class="container">
+    <h2 style="margin-top:0;">Dashboard</h2>
+    <div class="grid-3">
+      <div class="card"><div class="stat-label">Balance</div><div class="balance-figure" id="dashBalance">$0.00</div></div>
+      <div class="card"><div class="stat-label">Total earned</div><div class="balance-figure" id="dashTotal" style="font-size:28px;">$0.00</div></div>
+      <div class="card"><div class="stat-label">Offers completed</div><div class="balance-figure" id="dashOffers" style="font-size:28px;">0</div></div>
+    </div>
+
+    <!-- OFFERWALLS — Admin se add hone wale -->
+    <div class="card" style="margin-top:24px;">
+      <h3 style="margin-top:0;">Complete Offers & Earn</h3>
+      <p style="color:var(--muted);font-size:13px;margin:0 0 12px;">Complete offers below to earn real money directly to your balance.</p>
+      <div id="dashOfferwalls"></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px;align-items:start;">
+      <div class="card">
+        <h3 style="margin-top:0;">Your referral link</h3>
+        <p style="color:var(--muted);font-size:13px;">Earn 10% lifetime commission on referral earnings.</p>
+        <div style="display:flex;gap:8px;">
+          <input id="refLink" readonly style="font-family:'JetBrains Mono';font-size:12px;" />
+          <button class="btn btn-ghost btn-sm" id="copyRef">Copy</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;">Request withdrawal</h3>
+        <div id="wdMsg"></div>
+        <form id="wdForm">
+          <div class="field"><label>Amount (USD)</label><input type="number" id="wdAmount" min="5" step="0.01" required /></div>
+          <div class="field"><label>Method</label>
+            <select id="wdMethod">
+              <option>PayPal</option><option>Bitcoin (BTC)</option><option>USDT (TRC20)</option>
+              <option>Ethereum (ETH)</option><option>UPI</option><option>Amazon Gift Card</option>
+              <option>Payoneer</option><option>Litecoin (LTC)</option>
+            </select>
+          </div>
+          <div class="field"><label>Payment address / UPI ID / email</label><input type="text" id="wdAddress" required /></div>
+          <button class="btn btn-primary" type="submit">Submit request</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <h3 style="margin-top:0;">Transaction history</h3>
+      <div id="txHistory"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMIN -->
+<section data-route="admin">
+  <div class="container">
+    <h2 style="margin-top:0;">Admin Panel</h2>
+
+    <div class="card" style="margin-bottom:24px;">
+      <h3 style="margin-top:0;">Pending Withdrawals</h3>
+      <div id="adminWithdrawals"></div>
+    </div>
+
+    <!-- OFFERWALL ADMIN — Multiple offerwalls add karo -->
+    <div class="card" style="margin-bottom:24px;">
+      <h3 style="margin-top:0;">Manage Offerwalls</h3>
+      <p style="color:var(--muted);font-size:13px;">Koi bhi offerwall add karo — iframe ya link dono chalega.</p>
+      <div id="adminOwMsg"></div>
+      <form id="owForm" style="margin-bottom:20px;">
+        <div class="field"><label>Offerwall Name</label><input type="text" id="owName" required placeholder="e.g. Mylead, AdGate, Lootably" /></div>
+        <div class="field"><label>Iframe URL ya Link</label><input type="text" id="owUrl" required placeholder="https://..." /></div>
+        <div class="field"><label>Type</label>
+          <select id="owType">
+            <option value="iframe">Iframe (andar dikhega)</option>
+            <option value="link">Link (nayi tab mein khulega)</option>
+          </select>
+        </div>
+        <div class="field"><label>Status</label>
+          <select id="owStatus"><option value="active">Active</option><option value="inactive">Inactive</option></select>
+        </div>
+        <button class="btn btn-primary" type="submit">Add Offerwall</button>
+      </form>
+      <div id="adminOwList"></div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <h3 style="margin-top:0;">Users</h3>
+      <div id="adminUsers"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERBOARD -->
+<section data-route="leaderboard">
+  <div class="container">
+    <h2 style="margin-top:0;">Leaderboard</h2>
+    <p style="color:var(--muted);">Top earners, updated as offers are verified.</p>
+    <div class="card" style="margin-top:16px;">
+      <table>
+        <thead><tr><th>#</th><th>Earner</th><th>Country</th><th>Total earned</th></tr></thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+      <div id="leaderboardEmpty"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section data-route="about">
+  <div class="container" style="max-width:720px;">
+    <h2 style="margin-top:0;">About SABR Empire</h2>
+    <p style="color:var(--muted);line-height:1.7;">SABR Empire is a get-paid-to platform. We partner with offerwall networks that pay us for verified user actions and we pass the majority of that payout straight to the member who did the work.</p>
+    <p style="color:var(--muted);line-height:1.7;">Every balance starts at zero. Nothing is credited until the offerwall network confirms it happened.</p>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section data-route="terms">
+  <div class="container" style="max-width:720px;">
+    <h2 style="margin-top:0;">Terms of Service</h2>
+    <div style="color:var(--muted);line-height:1.7;font-size:14px;">
+      <p>1. <strong>Eligibility.</strong> You must be able to legally enter a binding agreement in your country.</p>
+      <p>2. <strong>Earnings.</strong> Balances are credited only after the offerwall network confirms completion.</p>
+      <p>3. <strong>Withdrawals.</strong> Minimum withdrawal is $5.00. Processed on the 1st and 15th of each month.</p>
+      <p>4. <strong>Prohibited activity.</strong> Multiple accounts, VPN abuse, or false information is grounds for a ban.</p>
+      <p>5. <strong>Referrals.</strong> The 10% lifetime referral commission applies to verified earnings only.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section data-route="privacy">
+  <div class="container" style="max-width:720px;">
+    <h2 style="margin-top:0;">Privacy Policy</h2>
+    <div style="color:var(--muted);line-height:1.7;font-size:14px;">
+      <p>We collect name, email, and country at signup plus activity data needed to credit your balance.</p>
+      <p>We share a user identifier with offerwall networks — we don't share your email or payment details.</p>
+      <p>You can request account deletion at any time by contacting us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section data-route="contact">
+  <div class="container">
+    <div class="card authcard">
+      <h2 style="margin-top:0;">Contact us</h2>
+      <div id="contactMsg"></div>
+      <form id="contactForm">
+        <div class="field"><label>Name</label><input type="text" id="cName" required /></div>
+        <div class="field"><label>Email</label><input type="email" id="cEmail" required /></div>
+        <div class="field"><label>Message</label><textarea id="cMessage" rows="4" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- NOT FOUND -->
+<section data-route="notfound">
+  <div class="container"><p>Page not found. <a href="#/home" style="color:var(--purple-bright);">Go home</a></p></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="logo"><span class="mark"></span>SABR EMPIRE</div>
+    <div class="footlinks">
+      <a href="#/about">About</a><a href="#/terms">Terms</a><a href="#/privacy">Privacy</a><a href="#/contact">Contact</a>
+    </div>
+    <p style="margin-top:16px;">© 2026 SABR Empire. All earnings are paid from real offerwall revenue.</p>
+  </div>
+</footer>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+  signOut, onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, setDoc, getDoc, updateDoc, onSnapshot,
+  collection, addDoc, query, where, orderBy, limit, getDocs,
+  deleteDoc, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+// ============================================================
+// FIREBASE CONFIG — YAHAN APNA CONFIG DAALO
+// ============================================================
+const firebaseConfig = {
+  apiKey: "AIzaSyA57cwAsjNZEzGrltpCCU07VF_kn3PGCdc",
+  authDomain: "empire-d963a.firebaseapp.com",
+  projectId: "empire-d963a",
+  storageBucket: "empire-d963a.firebasestorage.app",
+  messagingSenderId: "844748436927",
+  appId: "1:844748436927:web:cc41d9350540e93bf69d0a"
+};
+// ============================================================
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// ADMIN EMAIL — Yahan apni admin email daalo
+const ADMIN_EMAIL = "sa5332227@gmail.com";
+
+let currentUser = null;
+let currentUserDoc = null;
+let unsubUserDoc = null;
+
+// Payment methods
+const PAYMENT_METHODS = ["PayPal","Bitcoin (BTC)","USDT (TRC20)","Ethereum (ETH)","UPI (India)","Amazon Gift Card","Payoneer","Litecoin (LTC)"];
+document.getElementById('paymentMethods').innerHTML = PAYMENT_METHODS.map(m=>`<div class="card" style="padding:14px 18px;">${m}</div>`).join('');
+
+// FAQs
+const FAQS = [
+  ["Is this real money?","Yes — your balance is in USD and converts directly to the payout methods listed."],
+  ["When are withdrawals paid?","Twice a month, on the 1st and 15th, after manual review."],
+  ["Can I get banned?","Yes, for multi-accounting, VPN abuse, or submitting false info to a network."],
+  ["How do referrals work?","Share your referral link and earn 10% of everything your referrals earn, forever."]
+];
+document.getElementById('faqList').innerHTML = FAQS.map(([q,a])=>`
+  <div class="card"><strong>${q}</strong><p style="color:var(--muted);margin:8px 0 0;font-size:14px;">${a}</p></div>
+`).join('');
+
+// Hamburger menu
+document.getElementById('hamburger').addEventListener('click', ()=>{
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// ---- Router ----
+const routes = ["home","login","signup","dashboard","admin","about","terms","privacy","contact","leaderboard"];
+const protectedRoutes = ["dashboard","admin"];
+
+function parseHash(){
+  const h = (location.hash||"#/home").replace(/^#\//,"");
+  const [route,qs] = h.split("?");
+  return { route: routes.includes(route)?route:"notfound", params: new URLSearchParams(qs||"") };
+}
+
+function render(){
+  const {route,params} = parseHash();
+  document.querySelectorAll('main [data-route]').forEach(s=>{
+    s.classList.toggle('hidden', s.dataset.route!==route);
+  });
+  if(protectedRoutes.includes(route) && !currentUser){ location.hash="#/login"; return; }
+  if(route==="admin"){
+    if(!currentUser || currentUser.email!==ADMIN_EMAIL){ location.hash="#/home"; return; }
+    loadAdmin();
+  }
+  if(route==="dashboard" && currentUser) loadDashboard();
+  if(route==="leaderboard") loadLeaderboard();
+  if(route==="signup" && params.get("ref")) sessionStorage.setItem("sabr_ref", params.get("ref"));
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange', render);
+
+// ---- Auth ----
+onAuthStateChanged(auth, async(user)=>{
+  currentUser = user;
+  const navAuth = document.getElementById('navAuth');
+  if(unsubUserDoc){ unsubUserDoc(); unsubUserDoc=null; }
+  if(user){
+    const isAdmin = user.email===ADMIN_EMAIL;
+    navAuth.innerHTML = `
+      <a href="#/dashboard" class="btn btn-ghost btn-sm">Dashboard</a>
+      ${isAdmin?'<a href="#/admin" class="btn btn-ghost btn-sm">Admin</a>':''}
+      <button id="logoutBtn" class="btn btn-primary btn-sm">Log out</button>
+    `;
+    document.getElementById('logoutBtn').onclick = ()=>signOut(auth);
+    const userRef = doc(db,"users",user.uid);
+    unsubUserDoc = onSnapshot(userRef,(snap)=>{
+      currentUserDoc = snap.exists()?snap.data():null;
+      updateDashboardUI();
+    });
+  } else {
+    navAuth.innerHTML = `
+      <a href="#/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="#/signup" class="btn btn-primary btn-sm">Sign up</a>
+    `;
+  }
+  render();
+});
+
+// Signup
+document.getElementById('signupForm').addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const msg = document.getElementById('signupMsg');
+  msg.innerHTML='';
+  try{
+    const cred = await createUserWithEmailAndPassword(auth,
+      document.getElementById('suEmail').value.trim(),
+      document.getElementById('suPassword').value);
+    await setDoc(doc(db,"users",cred.user.uid),{
+      name: document.getElementById('suName').value.trim(),
+      email: document.getElementById('suEmail').value.trim(),
+      country: document.getElementById('suCountry').value.trim(),
+      balance:0, totalEarned:0, offersCompleted:0,
+      referralCode: cred.user.uid.slice(0,8),
+      referredBy: sessionStorage.getItem('sabr_ref')||null,
+      status:"active", createdAt:serverTimestamp()
+    });
+    sessionStorage.removeItem('sabr_ref');
+    location.hash="#/dashboard";
+  }catch(err){ msg.innerHTML=`<div class="msg msg-error">${err.message}</div>`; }
+});
+
+// Login
+document.getElementById('loginForm').addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const msg = document.getElementById('loginMsg');
+  msg.innerHTML='';
+  try{
+    await signInWithEmailAndPassword(auth,
+      document.getElementById('loginEmail').value.trim(),
+      document.getElementById('loginPassword').value);
+    location.hash="#/dashboard";
+  }catch(err){ msg.innerHTML=`<div class="msg msg-error">${err.message}</div>`; }
+});
+
+// ---- Dashboard ----
+function updateDashboardUI(){
+  if(!currentUserDoc||!currentUser) return;
+  document.getElementById('dashBalance').textContent=`$${Number(currentUserDoc.balance||0).toFixed(2)}`;
+  document.getElementById('dashTotal').textContent=`$${Number(currentUserDoc.totalEarned||0).toFixed(2)}`;
+  document.getElementById('dashOffers').textContent=currentUserDoc.offersCompleted||0;
+  document.getElementById('refLink').value=`${location.origin}${location.pathname}#/signup?ref=${currentUser.uid}`;
+}
+
+document.getElementById('copyRef').addEventListener('click',()=>{
+  const el=document.getElementById('refLink'); el.select(); document.execCommand('copy');
+});
+
+async function loadDashboard(){
+  updateDashboardUI();
+  // Load offerwalls from Firebase
+  const owBox = document.getElementById('dashOfferwalls');
+  const snap = await getDocs(query(collection(db,"offerwalls"), where("status","==","active")));
+  if(snap.empty){
+    owBox.innerHTML=`<div class="empty-state">Abhi koi offerwall active nahi hai. Jald hi aayega!</div>`;
+  } else {
+    owBox.innerHTML='';
+    snap.forEach(d=>{
+      const o=d.data();
+      if(o.type==='iframe'){
+        owBox.innerHTML+=`
+          <div class="ow-card">
+            <h4>${o.name}</h4>
+            <div class="ow-iframe-wrap">
+              <iframe src="${o.url}" sandbox="allow-top-navigation allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+            </div>
+          </div>`;
+      } else {
+        owBox.innerHTML+=`
+          <div class="ow-card" style="display:flex;align-items:center;justify-content:space-between;">
+            <div><h4 style="margin:0;">${o.name}</h4><p>Click karke offers complete karo</p></div>
+            <a href="${o.url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open</a>
+          </div>`;
+      }
+    });
+  }
+
+  // Transaction history
+  const txBox=document.getElementById('txHistory');
+  const txSnap=await getDocs(query(collection(db,"transactions"),where("uid","==",currentUser.uid),orderBy("createdAt","desc"),limit(20)));
+  if(txSnap.empty){
+    txBox.innerHTML=`<div class="empty-state">Abhi koi transaction nahi hai. Offer complete karo!</div>`;
+  } else {
+    let rows='';
+    txSnap.forEach(d=>{
+      const t=d.data();
+      rows+=`<tr><td>${t.type}</td><td>${t.description||''}</td><td>$${Number(t.amount).toFixed(2)}</td></tr>`;
+    });
+    txBox.innerHTML=`<table><thead><tr><th>Type</th><th>Detail</th><th>Amount</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
+}
+
+// Withdrawal
+document.getElementById('wdForm').addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const msg=document.getElementById('wdMsg');
+  msg.innerHTML='';
+  const amount=parseFloat(document.getElementById('wdAmount').value);
+  const method=document.getElementById('wdMethod').value;
+  const address=document.getElementById('wdAddress').value.trim();
+  if(amount<5){ msg.innerHTML=`<div class="msg msg-error">Minimum withdrawal is $5.00</div>`; return; }
+  if(!currentUserDoc||amount>Number(currentUserDoc.balance||0)){
+    msg.innerHTML=`<div class="msg msg-error">Amount exceeds your balance</div>`; return;
+  }
+  try{
+    await addDoc(collection(db,"withdrawals"),{
+      uid:currentUser.uid, userEmail:currentUser.email, amount, method, address,
+      status:"pending", requestedAt:serverTimestamp()
+    });
+    msg.innerHTML=`<div class="msg msg-ok">Request submitted! Paid on next cycle (1st or 15th).</div>`;
+    e.target.reset();
+  }catch(err){ msg.innerHTML=`<div class="msg msg-error">${err.message}</div>`; }
+});
+
+// ---- Admin ----
+async function loadAdmin(){
+
+  // Withdrawals
+  const wBox=document.getElementById('adminWithdrawals');
+  const wSnap=await getDocs(query(collection(db,"withdrawals"),where("status","==","pending")));
+  if(wSnap.empty){
+    wBox.innerHTML=`<div class="empty-state">No pending withdrawals.</div>`;
+  } else {
+    let rows='';
+    wSnap.forEach(d=>{
+      const w=d.data();
+      rows+=`<tr>
+        <td>${w.userEmail}</td><td>$${Number(w.amount).toFixed(2)}</td>
+        <td>${w.method}</td><td class="mono" style="max-width:120px;overflow:hidden;text-overflow:ellipsis;">${w.address}</td>
+        <td style="display:flex;gap:6px;">
+          <button class="btn btn-sm btn-primary" data-approve="${d.id}" data-uid="${w.uid}" data-amount="${w.amount}">Approve</button>
+          <button class="btn btn-sm btn-danger" data-reject="${d.id}">Reject</button>
+        </td></tr>`;
+    });
+    wBox.innerHTML=`<table><thead><tr><th>User</th><th>Amount</th><th>Method</th><th>Address</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+    wBox.querySelectorAll('[data-approve]').forEach(btn=>btn.onclick=async()=>{
+      const id=btn.dataset.approve,uid=btn.dataset.uid,amount=parseFloat(btn.dataset.amount);
+      const uSnap=await getDoc(doc(db,"users",uid));
+      await updateDoc(doc(db,"users",uid),{balance:Number(uSnap.data().balance||0)-amount});
+      await updateDoc(doc(db,"withdrawals",id),{status:"approved",processedAt:serverTimestamp()});
+      await addDoc(collection(db,"transactions"),{uid,type:"withdrawal",amount:-amount,description:"Withdrawal paid",createdAt:serverTimestamp()});
+      loadAdmin();
+    });
+    wBox.querySelectorAll('[data-reject]').forEach(btn=>btn.onclick=async()=>{
+      await updateDoc(doc(db,"withdrawals",btn.dataset.reject),{status:"rejected",processedAt:serverTimestamp()});
+      loadAdmin();
+    });
+  }
+
+  // Offerwalls list
+  await loadAdminOwList();
+
+  // Users
+  const uBox=document.getElementById('adminUsers');
+  const uSnap=await getDocs(collection(db,"users"));
+  if(uSnap.empty){
+    uBox.innerHTML=`<div class="empty-state">No users yet.</div>`;
+  } else {
+    let rows='';
+    uSnap.forEach(d=>{
+      const u=d.data();
+      rows+=`<tr>
+        <td>${u.name}</td><td>${u.email}</td><td>${u.country}</td>
+        <td>$${Number(u.balance||0).toFixed(2)}</td>
+        <td><span class="pill ${u.status==='banned'?'pill-banned':'pill-active'}">${u.status}</span></td>
+        <td><button class="btn btn-sm btn-ghost" data-ban="${d.id}" data-status="${u.status}">${u.status==='banned'?'Unban':'Ban'}</button></td>
+      </tr>`;
+    });
+    uBox.innerHTML=`<table><thead><tr><th>Name</th><th>Email</th><th>Country</th><th>Balance</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+    uBox.querySelectorAll('[data-ban]').forEach(btn=>btn.onclick=async()=>{
+      const newStatus=btn.dataset.status==='banned'?'active':'banned';
+      await updateDoc(doc(db,"users",btn.dataset.ban),{status:newStatus});
+      loadAdmin();
+    });
+  }
+}
+
+// Offerwall list in admin
+async function loadAdminOwList(){
+  const box=document.getElementById('adminOwList');
+  const snap=await getDocs(collection(db,"offerwalls"));
+  if(snap.empty){
+    box.innerHTML=`<div class="empty-state">Koi offerwall nahi hai. Upar se add karo.</div>`;
+    return;
+  }
+  let rows='';
+  snap.forEach(d=>{
+    const o=d.data();
+    rows+=`<tr>
+      <td>${o.name}</td>
+      <td>${o.type}</td>
+      <td><span class="pill ${o.status==='active'?'pill-active':'pill-banned'}">${o.status}</span></td>
+      <td style="display:flex;gap:6px;">
+        <button class="btn btn-sm btn-ghost" data-toggle="${d.id}" data-status="${o.status}">${o.status==='active'?'Disable':'Enable'}</button>
+        <button class="btn btn-sm btn-danger" data-delete="${d.id}">Delete</button>
+      </td>
+    </tr>`;
+  });
+  box.innerHTML=`<table><thead><tr><th>Name</th><th>Type</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+  box.querySelectorAll('[data-toggle]').forEach(btn=>btn.onclick=async()=>{
+    const newStatus=btn.dataset.status==='active'?'inactive':'active';
+    await updateDoc(doc(db,"offerwalls",btn.dataset.toggle),{status:newStatus});
+    loadAdminOwList();
+  });
+  box.querySelectorAll('[data-delete]').forEach(btn=>btn.onclick=async()=>{
+    if(confirm('Delete karna chahte ho?')){
+      await deleteDoc(doc(db,"offerwalls",btn.dataset.delete));
+      loadAdminOwList();
+    }
+  });
+}
+
+// Add offerwall form
+document.getElementById('owForm').addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const msg=document.getElementById('adminOwMsg');
+  try{
+    await addDoc(collection(db,"offerwalls"),{
+      name: document.getElementById('owName').value.trim(),
+      url: document.getElementById('owUrl').value.trim(),
+      type: document.getElementById('owType').value,
+      status: document.getElementById('owStatus').value,
+      createdAt: serverTimestamp()
+    });
+    msg.innerHTML=`<div class="msg msg-ok">Offerwall add ho gaya!</div>`;
+    e.target.reset();
+    loadAdminOwList();
+  }catch(err){ msg.innerHTML=`<div class="msg msg-error">${err.message}</div>`; }
+});
+
+// ---- Leaderboard ----
+async function loadLeaderboard(){
+  const body=document.getElementById('leaderboardBody');
+  const empty=document.getElementById('leaderboardEmpty');
+  const snap=await getDocs(query(collection(db,"leaderboard"),orderBy("totalEarned","desc"),limit(20)));
+  if(snap.empty){
+    body.innerHTML='';
+    empty.innerHTML=`<div class="empty-state">Abhi koi earnings nahi hain. Offers complete karo!</div>`;
+    return;
+  }
+  empty.innerHTML='';
+  let i=0,rows='';
+  snap.forEach(d=>{
+    i++;
+    const l=d.data();
+    rows+=`<tr><td>${i}</td><td>${l.displayName}</td><td>${l.country||''}</td><td>$${Number(l.totalEarned).toFixed(2)}</td></tr>`;
+  });
+  body.innerHTML=rows;
+}
+
+// ---- Contact ----
+document.getElementById('contactForm').addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const msg=document.getElementById('contactMsg');
+  try{
+    await addDoc(collection(db,"contactMessages"),{
+      name:document.getElementById('cName').value.trim(),
+      email:document.getElementById('cEmail').value.trim(),
+      message:document.getElementById('cMessage').value.trim(),
+      createdAt:serverTimestamp()
+    });
+    msg.innerHTML=`<div class="msg msg-ok">Message bhej diya! Jald hi reply milega.</div>`;
+    e.target.reset();
+  }catch(err){ msg.innerHTML=`<div class="msg msg-error">${err.message}</div>`; }
+});
+
+render();
+</script>
+</body>
+  </html>
